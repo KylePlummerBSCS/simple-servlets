@@ -16,6 +16,24 @@
 				"description": "send ping GET pong"
 			},
 			"response": []
+		},
+		{
+			"name": "post data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
 		}
 	]
 }

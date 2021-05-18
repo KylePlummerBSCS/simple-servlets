@@ -27,9 +27,9 @@ In order for the tomcat web server to execute servlets, we need a listener.
 This must be listed in the web.xml file with the `<listener>` tag. 
 This project's listener is described:
 ```
-    <listener>
-        <listener-class>servlet.DependencyLoaderListener</listener-class>
-    </listener>
+<listener>
+    <listener-class>Services.DependencyLoaderListener</listener-class>
+</listener>
 ```
 
 The listener itself implements `javax.servlet.ServletContextListener` and must override `contextInitialized` and `contextDestroyed`.

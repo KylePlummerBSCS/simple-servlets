@@ -27,7 +27,25 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "get data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "get JSON",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "post jackson",
 			"request": {
 				"method": "GET",
 				"header": [],

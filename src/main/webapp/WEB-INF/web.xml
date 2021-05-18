@@ -32,6 +32,15 @@
         <url-pattern>/data</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>jacksonServlet</servlet-name>
+        <servlet-class>servlet.JacksonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jacksonServlet</servlet-name>
+        <url-pattern>/jackson</url-pattern>
+    </servlet-mapping>
+
     <listener>
         <listener-class>Services.DependencyLoaderListener</listener-class>
     </listener>

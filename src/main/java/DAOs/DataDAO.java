@@ -38,4 +38,8 @@ public class DataDAO {
     public void setBool(boolean bool) {
         this.bool = bool;
     }
+
+    public String toJSON() {
+        return "{\"Data\": {\"string\":\"" + string + "\", \"integer\":" + integer + ", \"bool\": " + bool + "} }";
+    }
 }

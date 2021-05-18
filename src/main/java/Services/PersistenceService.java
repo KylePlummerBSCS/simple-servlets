@@ -2,8 +2,12 @@ package Services;
 
 import DAOs.DataDAO;
 
-public class AppService {
+public class PersistenceService {
     private static DataDAO data;
+
+    static {
+        data = new DataDAO("default", 0, false);
+    }
 
     public static DataDAO getData() {
         return data;

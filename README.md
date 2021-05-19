@@ -2,13 +2,22 @@
 
 ## Run Config
 ### Tomcat Server:
-Point tomcat server to the root directory of the tomcat software. ex: `apache-tomcat-9.0.46`
+Point tomcat server to the root directory of the tomcat software. ex: 
+`apache-tomcat-9.0.46`
 ### Deployment Dir:
-Set deployment directory to the working dorectory of your app. This should probably be the directory containing the directory `WEB-INF/`.
+Set deployment directory to the working directory of your app. This should probably 
+be the directory containing the directory `WEB-INF/`.
 ### Context Path:
-This will be the first part of your URL after the port. ex: `http://localhost:8080/CONTEXTPATH/...`
+This will be the first part of your URL after the port. ex: 
+`http://localhost:8080/CONTEXTPATH/...`
 
 ## Project Requirements
+### Directory Structure:
+In your deployment directory there should be a WEB-INF folder for web.xml and other any 
+resources needed by tomcat. This document suggests a folder called webapp 
+in the main/ directory. Resources needed at runtime can be accessed relatively from there. 
+
+
 ### Servlet Maven Dependency:
 This dependency in the POM.xml file tells maven to load the necessary software for servlets.
 ```
@@ -32,7 +41,8 @@ This project's listener is described:
 </listener>
 ```
 
-The listener itself implements `javax.servlet.ServletContextListener` and must override `contextInitialized` and `contextDestroyed`.
+The listener itself implements `javax.servlet.ServletContextListener` and must 
+override `contextInitialized` and `contextDestroyed`.
 The listener for this project is:
 ```
 public class DependencyLoaderListener implements ServletContextListener {
@@ -59,8 +69,10 @@ Each servlet must be described with a name and class. ex:
 ```
 
 ### Map the servlet:
-And each servlet must map a URL to the name. The url-pattern will be what follows the context path. ex: `http://localhost:8080/CONTEXTPATH/URL-PATTERN...`
-In the following example the /ping url-pattern maps to the pingServlet, which above points to the PingServlet class. 
+And each servlet must map a URL to the name. The url-pattern will be what follows 
+the context path. ex: `http://localhost:8080/CONTEXTPATH/URL-PATTERN...`
+In the following example the /ping url-pattern maps to the pingServlet, which above 
+points to the PingServlet class. 
 ```
     <servlet-mapping>
         <servlet-name>pingServlet</servlet-name>

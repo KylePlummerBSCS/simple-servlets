@@ -39,7 +39,7 @@ public class DataDAO {
         this.bool = bool;
     }
 
-    public String toJSON() {
-        return "{\"Data\": {\"string\":\"" + string + "\", \"integer\":" + integer + ", \"bool\": " + bool + "} }";
-    }
+//    public String toJSON() {
+//        return "{\"Data\": {\"string\":\"" + string + "\", \"integer\":" + integer + ", \"bool\": " + bool + "} }";
+//    }
 }
